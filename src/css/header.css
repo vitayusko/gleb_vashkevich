@@ -46,12 +46,18 @@
   font-weight: 400;
   line-height: 30px; /* 150% */
   text-transform: uppercase;
+  z-index: 10;
 }
+
+.nav-link.active {
+  font-weight: 700; /* Жирный шрифт для активного элемента */
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: #b883af;
 }
-.nav-link::after {
+/* .nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -65,6 +71,20 @@
 }
 .nav-link.active::after {
   background: #747bff;
+} */
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 45%; /* Расстояние от текста до подчёркивания */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%; /* Ширина SVG */
+  height: 4px; /* Высота SVG */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="5" viewBox="0 0 60 5" fill="none"><path d="M0.863281 2.66075L59.032 2.66075" stroke="url(%23paint0_linear_704_39)" stroke-width="4"/><defs><linearGradient id="paint0_linear_704_39" x1="55.7309" y1="3.36444" x2="6.61389" y2="-4.38403" gradientUnits="userSpaceOnUse"><stop stop-color="%23FFB147"/><stop offset="0.520264" stop-color="%23FF6C63"/><stop offset="1" stop-color="%23B86ADF"/></linearGradient></defs></svg>')
+    no-repeat center;
+  background-size: contain; /* Убедимся, что SVG подстраивается */
+  z-index: -10;
 }
 
 .social-list {
@@ -72,17 +92,6 @@
   flex-direction: row;
   gap: 12px;
 }
-/* .social-list-item {
-  background-color: #fff;
-  border-radius: 100%;
-  flex-shrink: 0;
-  padding: 10px;
-}
-.header-icon {
-  fill: #141313;
-  height: 20px;
-  width: 20px;
-} */
 
 .social-list-item {
   background-color: #fff;

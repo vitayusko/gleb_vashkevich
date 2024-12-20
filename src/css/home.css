@@ -73,14 +73,14 @@
 .img-vector-top {
   position: absolute;
   z-index: 0;
-  top: 70px;
+  top: 140px;
   left: -70px;
 }
 
 .img-vector-bottom {
   position: absolute;
   z-index: 0;
-  top: 372px;
+  top: 442px;
   left: 250px;
 }
 
@@ -95,13 +95,27 @@
 .img-vector-middle-top {
   position: absolute;
   z-index: 2;
-  top: 28px;
+  top: 98px;
   left: 30px;
 }
 
 .img-vector-middle-bottom {
   position: absolute;
   z-index: 2;
-  top: 220px;
+  top: 290px;
   left: -50px;
+}
+
+.img-vector-star-bottom {
+  position: absolute;
+  z-index: 2;
+  top: 450px;
+  left: 10px;
+}
+
+.img-vector-star-top {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
 }

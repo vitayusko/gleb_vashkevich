@@ -1,0 +1,101 @@
+.projects {
+}
+.projects-container {
+  padding: 100px;
+}
+.container {
+}
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  gap: 16px;
+  h3 {
+    color: #141313;
+    font-family: 'IBM Plex Sans';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 24px; /* 133.333% */
+    margin-bottom: 0;
+  }
+  h2 {
+    color: #141313;
+    font-family: 'IBM Plex Sans';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; /* 116.667% */
+    text-transform: uppercase;
+  }
+}
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.projects-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 145px;
+}
+.projects-list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex: 1 1 calc(50% - 148px); /* Две колонки с учетом отступа */
+  max-width: calc(50% - 148px); /* Для ограничения ширины */
+}
+.projects-list-item-text-wrapper {
+  width: 200px;
+
+  h3 {
+    color: #141313;
+    font-family: 'IBM Plex Sans';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 24px; /* 133.333% */
+    margin-bottom: 16px;
+  }
+  p {
+    color: #141313;
+    font-family: 'IBM Plex Sans';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+    margin-bottom: 24px;
+  }
+}
+
+.project-btn {
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  border: none;
+}
+.project-img {
+}
+.load-more-btn {
+  display: inline-flex;
+  height: 56px;
+  padding: 18px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: 'IBM Plex Sans';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 64px;
+  background: #141313;
+  width: 200px;
+}

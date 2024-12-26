@@ -46,6 +46,12 @@
   gap: 30px;
   flex: 1 1 calc(50% - 148px); /* Две колонки с учетом отступа */
   max-width: calc(50% - 148px); /* Для ограничения ширины */
+
+  a {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 .projects-list-item-text-wrapper {
   width: 200px;

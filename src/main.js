@@ -34,7 +34,7 @@ document.querySelectorAll('.collapsible-content').forEach(content => {
 const watchMoreBtn = document.querySelector('.watch-more-btn');
 if (watchMoreBtn) {
   watchMoreBtn.addEventListener('click', () => {
-    window.location.href = '/experience.html';
+    window.location.href = './experience.html';
   });
 }
 

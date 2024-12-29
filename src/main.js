@@ -29,29 +29,8 @@ document.querySelectorAll('.collapsible-content').forEach(content => {
   }
 });
 
-// about page
-// Секция для кнопки "watch-more-btn" на странице About
-const watchMoreBtn = document.querySelector('.watch-more-btn');
-if (watchMoreBtn) {
-  watchMoreBtn.addEventListener('click', () => {
-    window.location.href = './experience.html';
-  });
-}
-
 // header
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const navLinks = document.querySelectorAll('.nav-link');
-//   const currentUrl = window.location.pathname;
-
-//   navLinks.forEach(link => {
-//     if (link.getAttribute('href') === currentUrl) {
-//       link.classList.add('active');
-//     } else {
-//       link.classList.remove('active');
-//     }
-//   });
-// });
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const currentUrl = window.location.pathname.endsWith('/')
@@ -60,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Current URL:', currentUrl);
 
   navLinks.forEach(link => {
-    const linkUrl = link.getAttribute('href');
+    const linkUrl = new URL(link.getAttribute('href'), window.location.origin)
+      .pathname;
     console.log('Link Href:', linkUrl);
 
-    // Учитываем как абсолютные, так и относительные пути
     if (linkUrl === currentUrl || linkUrl === `${currentUrl}.html`) {
       link.classList.add('active');
     } else {
@@ -71,3 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// about page
+const watchMoreBtn = document.querySelector('.watch-more-btn');
+if (watchMoreBtn) {
+  watchMoreBtn.addEventListener('click', () => {
+    window.location.href = './experience.html';
+  });
+}

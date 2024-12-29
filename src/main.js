@@ -31,30 +31,75 @@ document.querySelectorAll('.collapsible-content').forEach(content => {
 
 // header
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const navLinks = document.querySelectorAll('.nav-link');
+//   const currentUrl = window.location.pathname.endsWith('/')
+//     ? window.location.pathname.slice(0, -1)
+//     : window.location.pathname;
+//   console.log('Current URL:', currentUrl);
+
+//   navLinks.forEach(link => {
+//     const linkUrl = new URL(link.getAttribute('href'), window.location.origin)
+//       .pathname;
+//     console.log('Link Href:', linkUrl);
+
+//     if (linkUrl === currentUrl || linkUrl === `${currentUrl}.html`) {
+//       link.classList.add('active');
+//     } else {
+//       link.classList.remove('active');
+//     }
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link'); // Находим все ссылки с классом nav-link
   const currentUrl = window.location.pathname.endsWith('/')
     ? window.location.pathname.slice(0, -1)
     : window.location.pathname;
-  console.log('Current URL:', currentUrl);
 
   navLinks.forEach(link => {
     const linkUrl = new URL(link.getAttribute('href'), window.location.origin)
       .pathname;
-    console.log('Link Href:', linkUrl);
 
     if (linkUrl === currentUrl || linkUrl === `${currentUrl}.html`) {
-      link.classList.add('active');
+      link.classList.add('active'); // Добавляем класс active
     } else {
-      link.classList.remove('active');
+      link.classList.remove('active'); // Удаляем класс active
     }
   });
 });
 
-// about page
-const watchMoreBtn = document.querySelector('.watch-more-btn');
-if (watchMoreBtn) {
-  watchMoreBtn.addEventListener('click', () => {
-    window.location.href = './experience.html';
+// burger menu
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Элементы меню
+  const burgerMenu = document.querySelector('.burger-menu');
+  const burgerOverlay = document.querySelector('.burger-overlay');
+  const closeMenu = document.querySelector('.close-menu');
+
+  // Проверяем, найдены ли элементы
+  if (!burgerMenu || !burgerOverlay || !closeMenu) {
+    console.error('One or more elements not found:', {
+      burgerMenu,
+      burgerOverlay,
+      closeMenu,
+    });
+    return;
+  }
+
+  // Открытие меню
+  burgerMenu.addEventListener('click', () => {
+    console.log('Menu opened');
+    burgerOverlay.classList.add('active');
   });
-}
+
+  // Закрытие меню
+  closeMenu.addEventListener('click', () => {
+    console.log('Menu closed');
+    burgerOverlay.classList.remove('active');
+    console.log(
+      'Class active removed:',
+      burgerOverlay.classList.contains('active')
+    ); // Проверка удаления
+  });
+});

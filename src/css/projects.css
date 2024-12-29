@@ -2,6 +2,8 @@
 }
 .projects-container {
   padding: 100px;
+  display: flex;
+  flex-direction: column;
 }
 .container {
 }

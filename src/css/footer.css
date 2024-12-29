@@ -1,5 +1,5 @@
 .footer {
-  padding: 20px 0;
+  padding: 20px 60px;
   background: #141313;
 }
 .footer-desc {
@@ -10,4 +10,57 @@
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 137.5% */
+  width: 270px;
+  margin-bottom: 15px;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px; /* Расстояние между элементами */
+  padding: 0; /* Убедимся, что у списка нет отступов */
+  margin: 0;
+}
+
+.social-list-item {
+  display: flex; /* Flexbox для центрирования содержимого */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  border-radius: 50%; /* Делаем элементы круглыми */
+  background-color: #fff;
+  width: 40px; /* Размер круга */
+  height: 40px;
+}
+
+.header-icon {
+  fill: #141313; /* Цвет SVG */
+  width: 20px; /* Устанавливаем размер SVG */
+  height: 20px;
+  display: block; /* Гарантируем, что SVG ведет себя как блочный элемент */
+}
+
+.footer-container {
+  align-items: center;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-social-row {
+  stroke-width: 1px;
+  stroke: #fff;
+  width: 131px;
+}
+
+/** Desktop styles **/
+@media screen and (min-width: 1440px) {
+  .footer-desc {
+    width: 500px;
+    margin-bottom: 0;
+  }
 }

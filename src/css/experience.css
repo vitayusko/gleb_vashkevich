@@ -3,6 +3,8 @@
 .container {
 }
 .experience-container {
+  display: flex;
+  flex-direction: column;
 }
 .title-wrapper {
   display: flex;

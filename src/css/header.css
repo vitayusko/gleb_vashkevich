@@ -174,21 +174,20 @@
 }
 
 .nav-link.active::after {
-  content: ''; /* Creates the pseudo-element */
-  position: absolute; /* Positions the pseudo-element relative to the parent */
-  bottom: 10px; /* Places the pseudo-element below the text */
-  left: 50%; /* Centers the pseudo-element horizontally */
-  transform: translateX(-50%); /* Ensures exact centering */
-  width: 73px; /* Sets the width of the pseudo-element */
-  height: 4px; /* Sets the height of the pseudo-element */
-  background: linear-gradient(
-    90deg,
-    #ffb147,
-    #ff6c63,
-    #b86adf
-  ); /* Adds a gradient */
-  display: block; /* Allows width and height to take effect */
-  z-index: 1; /* Ensures it's on top of other content */
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 73px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffb147, #ff6c63, #b86adf);
+  display: block;
+  z-index: 0;
+}
+.nav-link {
+  position: relative;
+  z-index: 2;
 }
 
 /** Desktop styles **/

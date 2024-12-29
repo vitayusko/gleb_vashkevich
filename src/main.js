@@ -31,26 +31,6 @@ document.querySelectorAll('.collapsible-content').forEach(content => {
 
 // header
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const navLinks = document.querySelectorAll('.nav-link');
-//   const currentUrl = window.location.pathname.endsWith('/')
-//     ? window.location.pathname.slice(0, -1)
-//     : window.location.pathname;
-//   console.log('Current URL:', currentUrl);
-
-//   navLinks.forEach(link => {
-//     const linkUrl = new URL(link.getAttribute('href'), window.location.origin)
-//       .pathname;
-//     console.log('Link Href:', linkUrl);
-
-//     if (linkUrl === currentUrl || linkUrl === `${currentUrl}.html`) {
-//       link.classList.add('active');
-//     } else {
-//       link.classList.remove('active');
-//     }
-//   });
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link'); // Находим все ссылки с классом nav-link
   const currentUrl = window.location.pathname.endsWith('/')
@@ -102,4 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
       burgerOverlay.classList.contains('active')
     ); // Проверка удаления
   });
+});
+
+// about page
+
+document.addEventListener('DOMContentLoaded', () => {
+  const watchMoreButton = document.querySelector('.watch-more-btn');
+
+  if (watchMoreButton) {
+    watchMoreButton.addEventListener('click', () => {
+      window.location.href = './experience.html';
+    });
+  }
 });

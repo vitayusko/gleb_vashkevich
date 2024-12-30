@@ -1,7 +1,7 @@
 .contact-container {
-  padding: 100px;
+  padding: 50px 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 30px;
   justify-content: space-between;
 }
@@ -20,10 +20,11 @@
   h2 {
     color: #141313;
     font-family: 'IBM Plex Sans';
-    font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 56px; /* 116.667% */
+    font-size: 35px;
+
+    line-height: 30px; /* 116.667% */
     text-transform: uppercase;
     margin-bottom: 30px;
   }
@@ -35,8 +36,8 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: -0.48px;
-    margin-bottom: 50px;
-    width: 430px;
+    margin-bottom: 25px;
+    /* width: 430px; */
   }
   button {
     background: #141313;
@@ -56,7 +57,8 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 133.333% */
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    width: 100%;
   }
   h3 {
     color: #141313;
@@ -72,6 +74,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  justify-content: space-between;
   a {
     color: #141313;
     font-family: 'IBM Plex Sans';
@@ -90,21 +93,21 @@
     #ff6c63 50.64%,
     #b86adf 92.05%
   );
-  padding: 64px 85px;
+  padding: 50px 20px;
   h2 {
     color: #fff;
     font-family: 'IBM Plex Sans';
-    font-size: 40px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 48px; /* 120% */
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 .name-email-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 45px;
   margin-bottom: 50px;
   input {
@@ -153,7 +156,7 @@
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
-    width: 258px;
+    width: 100%;
     color: #fff;
     font-family: 'IBM Plex Sans';
     font-size: 18px;
@@ -181,4 +184,49 @@ textarea::placeholder {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
   border-radius: 4px;
+}
+
+/** Desktop styles **/
+@media screen and (min-width: 1440px) {
+  .contact-container {
+    padding: 100px;
+    flex-direction: row;
+  }
+
+  .text-info {
+    h2 {
+      font-size: 48px;
+
+      line-height: 56px; /* 116.667% */
+    }
+    p {
+      margin-bottom: 50px;
+      width: 430px;
+    }
+    button {
+      margin-bottom: 50px;
+      width: 300px;
+    }
+  }
+  .siocial-media {
+    justify-content: flex-start;
+  }
+
+  .contact-foarm {
+    padding: 64px 85px;
+    h2 {
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .name-email-wrapper {
+    flex-direction: row;
+  }
+
+  .form {
+    button {
+      width: 258px;
+    }
+  }
 }

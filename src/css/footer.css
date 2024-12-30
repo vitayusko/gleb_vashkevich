@@ -1,16 +1,15 @@
 .footer {
-  padding: 20px 60px;
+  padding: 50px 60px;
   background: #141313;
 }
 .footer-desc {
-  text-align: left;
+  text-align: center;
   color: #fff;
   font-family: 'IBM Plex Sans';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 137.5% */
-  width: 270px;
   margin-bottom: 15px;
 }
 
@@ -45,7 +44,7 @@
 
 .list-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
   justify-content: space-between;
   align-items: center;
@@ -59,8 +58,15 @@
 
 /** Desktop styles **/
 @media screen and (min-width: 1440px) {
+  .footer {
+    padding: 20px 60px;
+  }
   .footer-desc {
     width: 500px;
     margin-bottom: 0;
+    text-align: left;
+  }
+  .list-wrapper {
+    flex-direction: row;
   }
 }

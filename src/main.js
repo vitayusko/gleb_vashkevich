@@ -5,13 +5,18 @@ document.querySelectorAll('.collapsible-button').forEach(button => {
     const item = button.closest('.experiance-list-item');
     item.classList.toggle('collapsed');
     const content = item.querySelector('.collapsible-content');
+    const isMobile = window.innerWidth <= 320; // Условие для мобильной версии
     const isCollapsed = item.classList.contains('collapsed');
 
-    if (isCollapsed) {
-      content.textContent = content.originalText;
+    if (isMobile) {
+      content.style.display = isCollapsed ? 'block' : 'none';
     } else {
-      content.originalText = content.textContent;
-      content.textContent = content.textContent.slice(0, 200) + '...';
+      if (isCollapsed) {
+        content.textContent = content.originalText;
+      } else {
+        content.originalText = content.textContent;
+        content.textContent = content.textContent.slice(0, 200) + '...';
+      }
     }
 
     const svg = button.querySelector('svg');
@@ -23,9 +28,12 @@ document.querySelectorAll('.collapsible-button').forEach(button => {
 
 // Инициализация текста при загрузке страницы
 document.querySelectorAll('.collapsible-content').forEach(content => {
-  if (content.textContent.length > 200) {
+  const isMobile = window.innerWidth <= 768;
+  if (!isMobile && content.textContent.length > 200) {
     content.originalText = content.textContent;
     content.textContent = content.textContent.slice(0, 200) + '...';
+  } else if (isMobile) {
+    content.style.display = 'none'; // Скрываем контент для мобильной версии
   }
 });
 

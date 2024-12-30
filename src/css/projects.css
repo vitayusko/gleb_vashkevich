@@ -1,7 +1,7 @@
 .projects {
 }
 .projects-container {
-  padding: 100px;
+  padding: 50px 10px;
   display: flex;
   flex-direction: column;
 }
@@ -11,23 +11,23 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 48px;
-  gap: 16px;
+  gap: 10px;
   h3 {
     color: #141313;
     font-family: 'IBM Plex Sans';
     font-size: 18px;
     font-style: italic;
     font-weight: 600;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
     margin-bottom: 0;
   }
   h2 {
     color: #141313;
     font-family: 'IBM Plex Sans';
-    font-size: 48px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 700;
-    line-height: 56px; /* 116.667% */
+    line-height: 30px;
     text-transform: uppercase;
   }
 }
@@ -38,26 +38,29 @@
 }
 .projects-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 145px;
+  align-items: center; /*изменить в десктопе*/
 }
 .projects-list-item {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  flex: 1 1 calc(50% - 148px); /* Две колонки с учетом отступа */
-  max-width: calc(50% - 148px); /* Для ограничения ширины */
 
   a {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 }
 .projects-list-item-text-wrapper {
   min-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   h3 {
     color: #141313;
@@ -66,7 +69,7 @@
     font-style: italic;
     font-weight: 600;
     line-height: 24px; /* 133.333% */
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
   }
   p {
     color: #141313;
@@ -107,4 +110,42 @@
   margin-top: 64px;
   background: #141313;
   width: 200px;
+}
+.role-project-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/** Desktop styles **/
+@media screen and (min-width: 1440px) {
+  .projects-container {
+    padding: 100px;
+  }
+
+  .title-wrapper {
+    gap: 16px;
+    h2 {
+      font-size: 48px;
+      line-height: 56px; /* 116.667% */
+    }
+  }
+  .projects-list {
+    flex-direction: row;
+  }
+
+  .projects-list-item {
+    flex-direction: row;
+    flex: 1 1 calc(50% - 148px); /* Две колонки с учетом отступа */
+    max-width: calc(50% - 148px); /* Для ограничения ширины */
+    a {
+      flex-direction: row;
+    }
+  }
+  .projects-list-item-text-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    h3 {
+      margin-bottom: 16px;
+    }
+  }
 }

@@ -377,6 +377,7 @@
 
   .main-info-about {
     flex-direction: row;
+    justify-content: space-between;
     gap: 145px;
     margin-bottom: 16px;
   }
@@ -404,6 +405,7 @@
   .experience-container-info-wrapper {
     flex-direction: row;
     gap: 200px;
+    justify-content: space-between;
   }
 
   .experiance-container-info {

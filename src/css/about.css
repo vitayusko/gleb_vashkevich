@@ -434,4 +434,8 @@
     font-size: 32px;
     line-height: 48px; /* 150% */
   }
+
+  .shot-experience-item {
+    width: 365px;
+  }
 }
